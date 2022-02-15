@@ -1,7 +1,8 @@
 #ifndef ADMIN
 #define ADMIN
-#include <netinet/in.h>
 #include <chrono>
+#include <netinet/in.h>
+#include <sys/socket.h>
 using namespace std;
 
 struct Admin{

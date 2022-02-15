@@ -24,10 +24,17 @@ This project consolidates basic knowledge about interprocess communication and r
 
 
 ### Client (Java)
+Linux
 ```
 cd client
 javac -d . -cp .:lib/* *.java
 java -cp .:lib/* client.UDPClient -h <HOST NAME> -p <PORT> [-al] [-am] [-fr <FAILURE RATE>] [-to <TIMEOUT>] [-mt <MAX TIMEOUT COUNT>] [-v]
+```
+Windows
+```
+cd client
+javac -d . -cp ".;lib/*" *.java
+java -cp "lib/*;." client.UDPClient -h 127.0.0.1 -p 8888 -fr 0.1 -to 500 -mt 1000 -v
 ```
 
 #### Note:

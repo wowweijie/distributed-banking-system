@@ -34,7 +34,7 @@ udp_server::udp_server(int port){
     serveraddr.sin_addr.s_addr = htonl(INADDR_ANY);
     serveraddr.sin_port = htons((unsigned short)portno);
 
-    if (bind(sockfd, (struct sockaddr *) &serveraddr, sizeof(serveraddr)) < 0)
+    if (::bind(sockfd, (struct sockaddr *) &serveraddr, sizeof(serveraddr)) < 0)
         perror("ERROR on binding");
 
     clientlen = sizeof(clientaddr);
